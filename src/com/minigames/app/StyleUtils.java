@@ -24,6 +24,9 @@ public class StyleUtils {
     public static final Color ACCENT_RED = new Color(224, 108, 117);
     public static final Color TEXT_BRIGHT = new Color(220, 223, 228);
     public static final Color TEXT_DIM = new Color(180, 183, 188);
+    public static final Font GAME_TITLE_FONT = new Font("Segoe UI", Font.BOLD, 32);
+    public static final Font DISPLAY_FONT = new Font("Segoe UI", Font.BOLD, 24);
+    public static final Font BUTTON_FONT = new Font("Segoe UI", Font.BOLD, 16);
     
     // Dimensions communes
     public static final Dimension WINDOW_SIZE = new Dimension(900, 700);

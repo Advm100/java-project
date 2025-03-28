@@ -41,22 +41,49 @@ public class LoginScreen extends JFrame {
             e.printStackTrace();
         }
         
-        // Main panel with background
         mainPanel = new JPanel() {
-            @Override
-            protected void paintComponent(Graphics g) {
-                super.paintComponent(g);
-                Graphics2D g2d = (Graphics2D) g;
-                
-                // Create gradient background
-                GradientPaint gp = new GradientPaint(
-                    0, 0, new Color(30, 34, 42), 
-                    getWidth(), getHeight(), new Color(50, 54, 62)
-                );
-                g2d.setPaint(gp);
-                g2d.fillRect(0, 0, getWidth(), getHeight());
-            }
-        };
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        
+        // Fond dégradé bleu spatial
+        GradientPaint gp = new GradientPaint(
+            0, 0, new Color(15, 20, 35),
+            getWidth(), getHeight(), new Color(35, 45, 75)
+        );
+        g2d.setPaint(gp);
+        g2d.fillRect(0, 0, getWidth(), getHeight());
+        
+        // Ajouter des étoiles
+        drawStars(g2d, getWidth(), getHeight());
+    }
+    
+    private void drawStars(Graphics2D g2d, int width, int height) {
+        // Petites étoiles
+        g2d.setColor(new Color(255, 255, 255, 180));
+        for (int i = 0; i < 100; i++) {
+            int x = (int)(Math.random() * width);
+            int y = (int)(Math.random() * height);
+            g2d.fillRect(x, y, 1, 1);
+        }
+        
+        // Étoiles moyennes avec lueur
+        for (int i = 0; i < 30; i++) {
+            int x = (int)(Math.random() * width);
+            int y = (int)(Math.random() * height);
+            
+            // Lueur
+            g2d.setColor(new Color(200, 200, 255, 50));
+            g2d.fillOval(x-2, y-2, 5, 5);
+            
+            // Étoile
+            g2d.setColor(new Color(255, 255, 255, 220));
+            g2d.fillRect(x, y, 2, 2);
+        }
+    }
+};
         cardLayout = new CardLayout();
         mainPanel.setLayout(cardLayout);
         
