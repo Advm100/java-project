@@ -64,7 +64,7 @@ public class LeaderboardManager {
         
         // Garder seulement les MAX_ENTRIES meilleurs scores
         if (gameLeaderboard.size() > MAX_ENTRIES) {
-            gameLeaderboard = gameLeaderboard.subList(0, MAX_ENTRIES);
+            gameLeaderboard = new ArrayList<>(gameLeaderboard.subList(0, MAX_ENTRIES));
         }
         
         // Mettre à jour le classement

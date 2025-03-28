@@ -202,6 +202,16 @@ public class MainMenu extends JFrame {
         dispose();
         new LoginScreen().setVisible(true);
     });
+
+    JButton leaderboardButton = StyleUtils.createStyledButton("CLASSEMENTS", StyleUtils.ACCENT_GREEN);
+    leaderboardButton.addActionListener(e -> {
+    setVisible(false);
+    LeaderboardScreen leaderboardScreen = new LeaderboardScreen(this);
+    leaderboardScreen.setVisible(true);
+    });
+
+// Ajoutez ce bouton à votre panel de boutons
+buttonPanel.add(leaderboardButton);
     
     buttonPanel.add(spaceProfileButton);
     buttonPanel.add(logoutButton);
