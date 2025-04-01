@@ -1,0 +1,15 @@
+src/com/minigames/games/MiniGame.java
+src/com/minigames/games/MemoryGame.java
+src/com/minigames/games/SnakeGame.java
+src/com/minigames/ui/SpaceProfileScreen.java
+src/com/minigames/ui/MainMenu.java
+src/com/minigames/ui/LeaderboardScreen.java
+src/com/minigames/ui/LoginScreen.java
+src/com/minigames/app/ThemeManager.java
+src/com/minigames/app/AnimationUtils.java
+src/com/minigames/app/StyleUtils.java
+src/com/minigames/app/MiniGamesApp.java
+src/com/minigames/user/LeaderboardManager.java
+src/com/minigames/user/SpaceProfile.java
+src/com/minigames/user/UserManager.java
+src/com/minigames/user/User.java

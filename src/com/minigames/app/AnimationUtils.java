@@ -15,37 +15,40 @@ public class AnimationUtils {
      * @param fadeIn true pour un fondu d'entrée, false pour un fondu de sortie
      * @param duration Durée de l'animation en millisecondes
      */
-    public static void fadePanel(JPanel panel, boolean fadeIn, int duration) {
-        float opacity = fadeIn ? 0.0f : 1.0f;
-        float step = 0.05f;
-        
-        // Rendre le panel transparent
-        panel.setOpaque(false);
-        
-        // Timer pour l'animation
-        Timer timer = new Timer(duration / 20, null);
-        timer.addActionListener(e -> {
-            if (fadeIn) {
-                opacity += step;
-                if (opacity >= 1.0f) {
-                    opacity = 1.0f;
-                    timer.stop();
-                }
-            } else {
-                opacity -= step;
-                if (opacity <= 0.0f) {
-                    opacity = 0.0f;
-                    timer.stop();
-                }
+    // Dans src/com/minigames/app/AnimationUtils.java
+
+public static void fadePanel(JPanel panel, boolean fadeIn, int duration) {
+    // Utilisez un tableau pour stocker la valeur de opacity
+    final float[] opacityRef = { fadeIn ? 0.0f : 1.0f };
+    float step = 0.05f;
+    
+    // Rendre le panel transparent
+    panel.setOpaque(false);
+    
+    // Timer pour l'animation
+    Timer timer = new Timer(duration / 20, null);
+    timer.addActionListener(e -> {
+        if (fadeIn) {
+            opacityRef[0] += step;
+            if (opacityRef[0] >= 1.0f) {
+                opacityRef[0] = 1.0f;
+                timer.stop();
             }
-            
-            // Appliquer l'opacité
-            panel.putClientProperty("opacity", opacity);
-            panel.repaint();
-        });
+        } else {
+            opacityRef[0] -= step;
+            if (opacityRef[0] <= 0.0f) {
+                opacityRef[0] = 0.0f;
+                timer.stop();
+            }
+        }
         
-        timer.start();
-    }
+        // Appliquer l'opacité
+        panel.putClientProperty("opacity", opacityRef[0]);
+        panel.repaint();
+    });
+    
+    timer.start();
+}
     
     /**
      * Anime la rotation d'une carte (effet 3D)

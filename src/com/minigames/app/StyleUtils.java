@@ -15,18 +15,18 @@ public class StyleUtils {
     private static Map<String, ImageIcon> iconCache = new HashMap<>();
     
     // Couleurs communes
-    public static final Color BACKGROUND_DARK = new Color(30, 34, 42);
-    public static final Color BACKGROUND_MEDIUM = new Color(40, 44, 52);
-    public static final Color BACKGROUND_LIGHT = new Color(50, 54, 62);
-    public static final Color ACCENT_BLUE = new Color(97, 175, 239);
-    public static final Color ACCENT_GREEN = new Color(152, 195, 121);
-    public static final Color ACCENT_YELLOW = new Color(229, 192, 123);
-    public static final Color ACCENT_RED = new Color(224, 108, 117);
-    public static final Color TEXT_BRIGHT = new Color(220, 223, 228);
-    public static final Color TEXT_DIM = new Color(180, 183, 188);
-    public static final Font GAME_TITLE_FONT = new Font("Segoe UI", Font.BOLD, 32);
-    public static final Font DISPLAY_FONT = new Font("Segoe UI", Font.BOLD, 24);
-    public static final Font BUTTON_FONT = new Font("Segoe UI", Font.BOLD, 16);
+    public static Color BACKGROUND_DARK = new Color(30, 34, 42);
+    public static Color BACKGROUND_MEDIUM = new Color(40, 44, 52);
+    public static Color BACKGROUND_LIGHT = new Color(50, 54, 62);
+    public static Color ACCENT_BLUE = new Color(97, 175, 239);
+    public static Color ACCENT_GREEN = new Color(152, 195, 121);
+    public static Color ACCENT_YELLOW = new Color(229, 192, 123);
+    public static Color ACCENT_RED = new Color(224, 108, 117);
+    public static Color TEXT_BRIGHT = new Color(220, 223, 228);
+    public static Color TEXT_DIM = new Color(180, 183, 188);
+    public static Font GAME_TITLE_FONT = new Font("Segoe UI", Font.BOLD, 32);
+    public static Font DISPLAY_FONT = new Font("Segoe UI", Font.BOLD, 24);
+    public static Font BUTTON_FONT = new Font("Segoe UI", Font.BOLD, 16);
     
     // Dimensions communes
     public static final Dimension WINDOW_SIZE = new Dimension(900, 700);

@@ -16,13 +16,9 @@ Java JDK 11 ou supérieur
 
 Compilateur Java
 
-## Compilation
+## Compilation et éxécution
 
-``` javac *.java ```
-
-## Exécution
-
-```java MiniGamesApp ```
+```./compile_and_run.sh```
 
 ## Fonctionnalités
 
